@@ -29,20 +29,22 @@ class StartPage(Page):
 
 
 # Simulated Annealing page 
+
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         Page.__init__(self, parent, controller, "Simulated Annealing")
         
-            # Text widget to display file contents
+
+        # Text widget to display file contents
         self.text_area = tk.Text(self, wrap="word", height=1, width=30)
-        self.text_area.pack(pady=50)
+        self.text_area.pack(pady=10)
 
     # Display file contents when the page is initialized
         self.display_file_contents()
 
     def display_file_contents(self):
         # Open and read the contents of the file
-        file_path = "best_route.txt"
+        file_path = "./text/best_route.txt"
         with open(file_path, "r") as file:
             file_contents = file.read()
 
@@ -81,7 +83,7 @@ class PageTwo(Page):
 
     def display_file_contents(self):
         # Open and read the contents of the file
-        file_path = "best_routePSO.txt"
+        file_path = "./text/best_routePSO.txt"
         with open(file_path, "r") as file:
             file_contents = file.read()
 
